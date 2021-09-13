@@ -1,5 +1,6 @@
-
 # Tech Blog
+
+<img width="438" alt="Screen Shot 2021-09-13 at 4 12 15 PM" src="https://user-images.githubusercontent.com/53482411/133157086-36f3fcf8-28fb-4105-b813-1a496e5f9a3d.png">
 
 ## Description
 This a Tech Blog app. It allows users to blog about all things related to Technology.
