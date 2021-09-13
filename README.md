@@ -4,6 +4,8 @@
 ## Description
 This a Tech Blog app. It allows users to blog about all things related to Technology.
 
+# Deployed Link
+https://frozen-sierra-86577.herokuapp.com/
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
