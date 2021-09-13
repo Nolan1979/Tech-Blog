@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    {{!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> --}}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <title>Tech Blog</title>
 </head>
@@ -28,7 +31,7 @@
                 </li>
                 <li class="nav-item">
                     {{#if loggedIn}}
-                    <button id="logout" class="btn-no-style">Logout</button>
+                    <button id="logout" class="btn">Logout</button>
                     {{else}}
                     <a class="nav-link" href="/login">Login</a>
                     {{/if}}
@@ -36,14 +39,40 @@
             </ul>
         </div>
     </nav>
-    <br>
-    <br>
-        <header class="hero"></header>
-            <div class="title">
-                <h1><strong>Tech Blog</strong></h1>
-            </div>
-        </header>
+    <header class="hero">
+        <h2><strong>Welcome!</strong></h2>
 
+    </header>
+
+    <div class="container register">
+        <div class="row">
+            <h3 class="register-heading">Create A Post</h3>
+            <form class="row register-form" id="post-form">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="newTitle" placeholder="TITLE *" value="" />
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="newText" placeholder="TEXT *" value="" />
+                        </div>
+
+                        <div class="form-group">
+                            <img class="card-img-top" src="" id="img-preview" />
+                            <label class="btn btn-lg" for="file-upload">
+                                <input id="file-upload" type="file" style="display:none;">
+                                Add Image
+                            </label>
+                            <input type="submit" class="btn btn-lg" value="Upload" />
+                        </div>
+            </form>
+        </div>
+
+    </div>
+    </div>
+
+    
 
     <main class="row">
         {{{body}}}
@@ -54,11 +83,10 @@
     </footer>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/cloudinary.js"></script>
-    
     {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
-    <script src="/js/login.js"></script>
+
 
 </body>
 
